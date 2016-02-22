@@ -20,12 +20,12 @@ public class DefinitionStep_FinUA {
     }
     @When("the user click on 'EUR' button")
     public void whenUserSwitchToEURRates(){
-        steps_finUa.switchToEUERates();
-    }
-    @Then("'EUR' rates are shown")
-    public void thenEURExchangeratesAREShown(){
         steps_finUa.checkThatEURRatesIsSelected();
     }
+   // @Then("'EUR' rates are shown")
+    //public void thenEURExchangeratesAREShown(){
+    //    steps_finUa.checkThatEURRatesIsSelected();
+   // }
     @Then ("calculated avg BID rate is equal to avg BID value from summary block")
     public void verifyCalculation_EUR_AVG_BID(){
         steps_finUa.verifyCalculation_EUR_AVG_BID();
@@ -42,5 +42,14 @@ public class DefinitionStep_FinUA {
     public void verifyCalculation_EUR_MIN_ASK (){
         steps_finUa.verifyCalculation_EUR_MIN_ASK();
     }
+    @Then("maximum value of BID rate from bank's table is equal to maximum value of BID rate in summary table")
+    public void verifyCalculation_EUR_MAX_BID (){
+        steps_finUa.verifyCalculation_EUR_MAX_BID();
+    }
+    @Then("maximum value of ASK rate from bank's table is equal to maximum value of ASK rate in summary table")
+    public void verifyCalculation_EUR_MAX_ASK (){
+        steps_finUa.verifyCalculation_EUR_MAX_ASK();
+    }
+
 
 }
