@@ -9,6 +9,12 @@ Given the user is on the finance.i.ua home page
 When the user click on 'EUR' button
 Then 'EUR' rates are shown
 
+Scenario: Checking calculation of MAXIMUM EUR-UAH rates based on bank's rates data
+Given the user is on the finance.i.ua home page
+When the user click on 'EUR' button
+Then maximum value of BID rate in bank's table is equal to maximum value of BID rate in summary table
+Then maximum value of ASK rate in bank's table is equal to maximum value of ASK rate in summary table
+
 Scenario: Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data
 Given the user is on the finance.i.ua home page
 When the user click on 'EUR' button
@@ -20,12 +26,6 @@ Given the user is on the finance.i.ua home page
 When the user click on 'EUR' button
 Then minimum value of BID rate in bank's table is equal to minimum value of BID rate in summary table
 Then minimum value of ASK rate in bank's table is equal to minimum value of ASK rate in summary table
-
-Scenario: Checking calculation of MAXIMUM EUR-UAH rates based on bank's rates data
-Given the user is on the finance.i.ua home page
-When the user click on 'EUR' button
-Then maximum value of BID rate in bank's table is equal to maximum value of BID rate in summary table
-Then maximum value of ASK rate in bank's table is equal to maximum value of ASK rate in summary table
 
 Scenario: Checking calculation of OPTIMAL EUR-UAH rates based on bank's rates data
 Given the user is on the finance.i.ua home page

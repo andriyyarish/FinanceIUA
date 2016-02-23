@@ -4,7 +4,6 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 import java.text.DecimalFormat;
@@ -20,14 +19,18 @@ public class FinUA_StartPage extends PageObject {
     @FindBy (xpath = "//a[@href='/eur/']/../..") private WebElementFacade typeOfCurrency_EUR;
 
     // elements from Summary table
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальный')]]/following-sibling::*[1]") private WebElementFacade maxBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальный')]]/following-sibling::*[2]") private WebElementFacade maxASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[1]",timeoutInSeconds="6") private WebElement maxBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[2]",timeoutInSeconds="6") private WebElement maxASK;
+   // @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]") private WebElementFacade maxBID;
+   // @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]") private WebElementFacade maxASK;
+
+
     @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]") private WebElementFacade minBID;
     @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]") private WebElementFacade minASK;
     @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[1]") private WebElementFacade avgBID;
     @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[2]") private WebElementFacade avgASK;
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальный')]]/following-sibling::*[1]") private WebElementFacade optmBID;  // should be equal to maxBID
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальный')]]/following-sibling::*[2]") private WebElementFacade optmASK; // should be equal to minASK
+    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[1]") private WebElementFacade optmBID;  // should be equal to maxBID
+    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[2]") private WebElementFacade optmASK; // should be equal to minASK
 
     //List of bank's rates
     @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr[not (@class)='expired']/td[2]") private List<WebElement> ratesBIDValueList; //[not (@class)='expired']
@@ -112,7 +115,7 @@ public class FinUA_StartPage extends PageObject {
     }
 
     public Double getMAX_BID(){
-        Assert.assertTrue(maxBID.isDisplayed());
+
         return Double.parseDouble(maxBID.getText());}
 
     public Double getMAX_ASK(){
