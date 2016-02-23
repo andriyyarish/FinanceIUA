@@ -17,18 +17,18 @@ public class FinUA_StartPage extends PageObject {
     @FindBy (xpath = "//a[@href='/eur/']/../..") private WebElement typeOfCurrency_EUR;
 
     // elements from Summary table
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальный')]]/following-sibling::*[1]") private WebElement maxLeft;
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальный')]]/following-sibling::*[2]") private WebElement maxRight;
-    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]") private WebElement minLeft;
-    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]") private WebElement minRight;
-    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[1]") private WebElement avgLeft;
-    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[2]") private WebElement avgRight;
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальный')]]/following-sibling::*[1]") private WebElement optLeft;  // should be equal to maxLeft
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальный')]]/following-sibling::*[2]") private WebElement optRight; // should be equal to minRight
+    @FindBy(xpath = "//td[em[contains(text(),'Максимальный')]]/following-sibling::*[1]") private WebElement maxBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Максимальный')]]/following-sibling::*[2]") private WebElement maxASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]") private WebElement minBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]") private WebElement minASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[1]") private WebElement avgBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[2]") private WebElement avgASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Оптимальный')]]/following-sibling::*[1]") private WebElement optmlBID;  // should be equal to maxBID
+    @FindBy(xpath = "//td[em[contains(text(),'Оптимальный')]]/following-sibling::*[2]") private WebElement optmlASK; // should be equal to minASK
 
     //List of bank's rates
-    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr/td[2]") private List<WebElement> ratesLeftValueList;
-    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr/td[3]") private List<WebElement> ratesRightValueList;
+    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr/td[2]") private List<WebElement> ratesBIDValueList;
+    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr/td[3]") private List<WebElement> ratesASKValueList;
 
 
 
@@ -38,7 +38,8 @@ public class FinUA_StartPage extends PageObject {
     }
 
     public boolean  checkThatCurencyIsSelected(){
-        if (typeOfCurrency_EUR.getCssValue("class")=="current") {
+        typeOfCurrency_EUR.click();
+        if (typeOfCurrency_EUR.getCssValue("class").equals(new String("current"))) {
             System.out.println(typeOfCurrency_EUR.getCssValue("class"));
             return true;
         }
@@ -60,36 +61,37 @@ public class FinUA_StartPage extends PageObject {
 
 
     public Double calcAVG_EURBID(){
-        return countAVG(ratesLeftValueList);
+        return countAVG(ratesBIDValueList);
     }
 
     public Double calcAVG_EURASK(){
-        return countAVG(ratesRightValueList);
+        return countAVG(ratesASKValueList);
     }
+
     public Double calcMIN_EURBID(){
         TreeSet <Double> ratesSet = null ;
-        for (WebElement el: ratesLeftValueList){
+        for (WebElement el: ratesBIDValueList){
             ratesSet.add(Double.parseDouble(el.getText()));
         }
         return ratesSet.first();
     }
     public Double calcMIN_EURASK(){
         TreeSet <Double> ratesSet = null ;
-        for (WebElement el: ratesRightValueList){
+        for (WebElement el: ratesASKValueList){
             ratesSet.add(Double.parseDouble(el.getText()));
         }
         return ratesSet.last();
     }
     public Double calcMAX_EURBID(){
         TreeSet <Double> ratesSet = null ;
-        for (WebElement el: ratesLeftValueList){
+        for (WebElement el: ratesBIDValueList){
             ratesSet.add(Double.parseDouble(el.getText()));
         }
         return ratesSet.last();
     }
     public Double calcMAX_EURASK(){
         TreeSet <Double> ratesSet = null ;
-        for (WebElement el: ratesRightValueList){
+        for (WebElement el: ratesASKValueList){
             ratesSet.add(Double.parseDouble(el.getText()));
         }
         return ratesSet.last();
@@ -100,22 +102,22 @@ public class FinUA_StartPage extends PageObject {
 
 
     // get values from summary table
-    public Double getAVGLeft() {
-        return  Double.parseDouble(avgLeft.getText());
+    public Double getAVG_BID() {
+        return  Double.parseDouble(avgBID.getText());
     }
-    public Double getAVGRight() {
-        return  Double.parseDouble(avgRight.getText());
+    public Double getAVG_ASK() {
+        return  Double.parseDouble(avgASK.getText());
     }
-    public Double getMINLeft(){
-        return Double.parseDouble(minLeft.getText());
+    public Double getMIN_BID(){
+        return Double.parseDouble(minBID.getText());
     }
-    public Double getMINRight(){
-        return Double.parseDouble(minRight.getText());
+    public Double getMIN_ASK(){
+        return Double.parseDouble(minASK.getText());
     }
-    public Double getMAXLeft(){
-        return Double.parseDouble(maxLeft.getText());
+    public Double getMAX_BID(){
+        return Double.parseDouble(maxBID.getText());
     }
-    public Double getMAXRight(){
-        return Double.parseDouble(maxRight.getText());
+    public Double getMAX_ASK(){
+        return Double.parseDouble(maxASK.getText());
     }
 }

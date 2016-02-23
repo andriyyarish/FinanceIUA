@@ -36,7 +36,7 @@ public class EndUserSteps_FinUa extends ScenarioSteps {
     @Step
     public void verifyCalculation_EUR_AVG_BID(){
         Double calcResult = finUA.calcAVG_EURBID();
-        Double givenResult = finUA.getAVGLeft();
+        Double givenResult = finUA.getAVG_BID();
         assertEquals(givenResult,calcResult);
         System.out.println ("calcResult = " + calcResult + "and givenResult = "+ givenResult);
     }
@@ -44,7 +44,7 @@ public class EndUserSteps_FinUa extends ScenarioSteps {
     @Step
     public void verifyCalculation_EUR_AVG_ASK(){
         Double calcResult = finUA.calcAVG_EURASK();
-        Double givenResult = finUA.getAVGRight();
+        Double givenResult = finUA.getAVG_ASK();
         assertEquals(givenResult,calcResult);
         System.out.println ("calcResult = " + calcResult + "and givenResult = "+ givenResult);
     }
@@ -52,15 +52,27 @@ public class EndUserSteps_FinUa extends ScenarioSteps {
     @Step
     public void verifyCalculation_EUR_MIN_BID(){
         Double calcResult = finUA.calcMIN_EURBID();
-        Double givenResult = finUA.getMINLeft();
+        Double givenResult = finUA.getMIN_BID();
         assertEquals(givenResult,calcResult);
     }
+    @Step
     public void verifyCalculation_EUR_MIN_ASK(){
         Double calcResult = finUA.calcMIN_EURASK();
-        Double givenResult = finUA.getMINRight();
+        Double givenResult = finUA.getMIN_ASK();
         assertEquals(givenResult,calcResult);
     }
-
+    @Step
+    public void verifyCalculation_EUR_MAX_BID(){
+        Double calcResult = finUA.calcMAX_EURBID();
+        Double givenResult = finUA.getMAX_BID();
+        assertEquals(givenResult,calcResult);
+    }
+    @Step
+    public void verifyCalculation_EUR_MAX_ASK(){
+        Double calcResult = finUA.calcMAX_EURASK();
+        Double givenResult = finUA.getMAX_ASK();
+        assertEquals(givenResult,calcResult);
+    }
 
 
 }
