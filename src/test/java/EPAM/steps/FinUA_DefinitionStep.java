@@ -21,10 +21,34 @@ public class FinUA_DefinitionStep {
         steps_finUa.switchToEURRates();
     }
 
+    @When("the user click on 'USD' button")
+    public void whenUserSwitchToUSDRates() {
+        steps_finUa.switchToUSDRates();
+    }
+
+    @When("the user click on 'RUB' button")
+    public void whenUserSwitchToRUBRates() {
+        steps_finUa.switchToUSDRates();
+    }
+
+
+    @Then("'USD' rates are shown")
+    public void thenUSDExchangeratesAREShown() {
+        steps_finUa.checkThatUSDRatesIsSelected();
+    }
+    @When("'USD' rates are shown")
+    public void whenUSDExchangeratesAREShown() {
+        steps_finUa.checkThatUSDRatesIsSelected();
+    }
+    @Then("'RUB' rates are shown")
+    public void thenRUBExchangeratesAREShown() {
+        steps_finUa.checkThatRUBRatesIsSelected();
+    }
     @Then("'EUR' rates are shown")
     public void thenEURExchangeratesAREShown() {
         steps_finUa.checkThatEURRatesIsSelected();
     }
+
 
     @Then("calculated avg BID rate is equal to avg BID value from summary block")
     public void verifyCalculation_EUR_AVG_BID() {

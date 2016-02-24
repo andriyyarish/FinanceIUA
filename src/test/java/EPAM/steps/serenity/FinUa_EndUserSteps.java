@@ -7,19 +7,10 @@ import net.thucydides.core.steps.ScenarioSteps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.webdriver.SystemPropertiesConfiguration;
 import org.apache.log4j.Logger;
-import org.junit.Assume;
-
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.isEmptyOrNullString;
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertTrue;
+
+
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assume.assumeThat;
 import static org.junit.Assume.assumeTrue;
 
@@ -36,14 +27,34 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
         getDriver().manage().window().maximize();
         LOG.info("Page is opened");
     }
-
+    //switching of currency types
     @Step
     public void switchToEURRates(){
         finUA.switchCurrencyToEUR();
     }
     @Step
+    public void switchToUSDRates(){
+        // USD rates are shown by default but without /usd/ URL's end
+        finUA.switchCurrencyToUSD();
+    }
+    @Step
+    public void switchToRUBRates(){
+        finUA.switchCurrencyToRUB();
+    }
+    // assertion after switching of currency type
+    @Step
     public void checkThatEURRatesIsSelected(){
-        assertTrue("Currency type is not switched to EUR",finUA.checkThatCurencyIsSelected());
+        assertThat("Currency type is not switched to EUR",true ,is(finUA.EUR_CurrencyIsSelected()));
+        LOG.info("Currency type is switched to EUR");
+    }
+    @Step
+    public void checkThatUSDRatesIsSelected(){
+        assertThat("Currency type is not switched to USD",true,is(finUA.USD_CurrencyIsSelected()));
+        LOG.info("Currency type is switched to EUR");
+    }
+    @Step
+    public void checkThatRUBRatesIsSelected(){
+        assertThat("Currency type is not switched to USD",finUA.RUB_CurencyIsSelected());
         LOG.info("Currency type is switched to EUR");
     }
 
@@ -51,7 +62,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_AVG_BID(){
         Double calcResult = finUA.calcAVG_EURBID();
         Double actualResult = finUA.getAVG_BID();
-        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
+        assertThat("Calculated value is not equal to the value from summary table",calcResult,is(actualResult));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + calcResult + " result from summary table = " + actualResult);
     }
@@ -60,7 +71,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_AVG_ASK(){
         Double calcResult = finUA.calcAVG_EURASK();
         Double actualResult = finUA.getAVG_ASK();
-        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
+        assertThat("Calculated value is not equal to the value from summary table",calcResult,is(actualResult));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + calcResult + " result from summary table = " + actualResult);
     }
@@ -69,7 +80,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_MIN_BID(){
         Double calcResult = finUA.calcMIN_EURBID();
         Double actualResult = finUA.getMIN_BID();
-        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
+        assertThat("Calculated value is not equal to the value from summary table",calcResult, is(actualResult));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + calcResult + " result from summary table = " + actualResult);
     }
@@ -77,7 +88,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_MIN_ASK(){
         Double calcResult = finUA.calcMIN_EURASK();
         Double actualResult = finUA.getMIN_ASK();
-        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
+        assertThat("Calculated value is not equal to the value from summary table",calcResult,is(actualResult));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + calcResult + " result from summary table = " + actualResult);
     }
@@ -85,7 +96,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_MAX_BID(){
         Double calcResult = finUA.calcMAX_EURBID();
         Double actualResult = finUA.getMAX_BID();
-        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
+        assertThat("Calculated value is not equal to the value from summary table",calcResult,equalTo(actualResult));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + calcResult + " result from summary table = " + actualResult);
     }
@@ -93,7 +104,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_MAX_ASK(){
         Double calcResult = finUA.calcMAX_EURASK();
         Double actualResult = finUA.getMAX_ASK();
-        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
+        assertThat("Calculated value is not equal to the value from summary table",calcResult,is(actualResult));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + calcResult + " result from summary table = " + actualResult);
     }
@@ -101,7 +112,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_OPTM_BID(){
         Double maximumBID = finUA.calcMAX_EURBID();
         Double optimalBID = finUA.getOPTM_BID();
-        assertEquals("Calculated value is not equal to the value from summary table",maximumBID,optimalBID);
+        assertThat("Calculated value is not equal to the value from summary table",maximumBID,is(optimalBID));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + maximumBID + " result from summary table = " + optimalBID);
     }
@@ -109,7 +120,7 @@ public class FinUa_EndUserSteps extends ScenarioSteps  {
     public void verifyCalculation_EUR_OPTM_ASK(){
         Double minimumASK = finUA.calcMIN_EURASK();
         Double optimalASK = finUA.getOPTM_ASK();
-        assertEquals("Calculated value is not equal to the value from summary table",minimumASK,optimalASK);
+        assertThat("Calculated value is not equal to the value from summary table",minimumASK,is(optimalASK));
         LOG.info("Calculated value is equal to the value from summary table." +
                 " Calculated result = " + minimumASK + " result from summary table = " + optimalASK);
     }

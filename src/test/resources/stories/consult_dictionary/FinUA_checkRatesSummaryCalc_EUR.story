@@ -1,4 +1,4 @@
-Check calculation of summary exchange rates
+Check calculation of summary exchange rates for EUR-UAH
 Narrative:
 In order to check calculation of exchange rates in summary table
 As an user

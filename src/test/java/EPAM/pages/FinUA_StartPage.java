@@ -15,8 +15,9 @@ import java.util.TreeSet;
 public class FinUA_StartPage extends PageObject {
 
     // currency switchers
-    @FindBy (xpath = "//a[@href='/eur/']/../..") private WebElementFacade typeOfCurrency_USD;
+    @FindBy (xpath = "//a[@href='/usd/']/../..") private WebElementFacade typeOfCurrency_USD;
     @FindBy (xpath = "//a[@href='/eur/']/../..") private WebElementFacade typeOfCurrency_EUR;
+    @FindBy (xpath = "//a[@href='/rub/']/../..") private WebElementFacade typeOfCurrency_RUB;
 
     // elements from Summary table
     @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[1]",timeoutInSeconds="6")
@@ -44,15 +45,34 @@ public class FinUA_StartPage extends PageObject {
 
     // switch currency type
     public void switchCurrencyToEUR() {
-        typeOfCurrency_EUR.click();
+        element(typeOfCurrency_EUR).click();
+    }
+    public void switchCurrencyToUSD() {
+        element(typeOfCurrency_USD).waitUntilClickable().click();
+    }
+    public void switchCurrencyToRUB() {
+        element(typeOfCurrency_RUB).click();
     }
 
-    public boolean  checkThatCurencyIsSelected() {
+    public boolean EUR_CurrencyIsSelected() {
         if (getDriver().getCurrentUrl().endsWith("eur/"))
             return true;
          else
             return false;
     }
+    public boolean  USD_CurrencyIsSelected() {
+        if (getDriver().getCurrentUrl().endsWith("usd/"))
+            return true;
+        else
+            return false;
+    }
+    public boolean  RUB_CurencyIsSelected() {
+        if (getDriver().getCurrentUrl().endsWith("rub/"))
+            return true;
+        else
+            return false;
+    }
+
     // calc AVG value
     private Double countAVG (List<WebElement> list){
         int ammountOfRows = 0;
