@@ -3,6 +3,6 @@ package EPAM;
 import net.serenitybdd.jbehave.SerenityStories;
 
 
-public class TestSuite_FinUA extends SerenityStories {
+public class FinUA_TestSuite extends SerenityStories {
 
 }

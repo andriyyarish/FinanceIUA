@@ -25,7 +25,7 @@ import static org.junit.Assume.assumeTrue;
 /**
  * Created by Andriy_Yarish on 2/22/2016.
  */
-public class EndUserSteps_FinUa extends ScenarioSteps  {
+public class FinUa_EndUserSteps extends ScenarioSteps  {
     FinUA_StartPage finUA;
 
 
@@ -36,64 +36,63 @@ public class EndUserSteps_FinUa extends ScenarioSteps  {
     }
 
     @Step
-    public void switchToEUERates(){
+    public void switchToEURRates(){
         finUA.switchCurrencyToEUR();
     }
     @Step
     public void checkThatEURRatesIsSelected(){
-        assumeThat(true,is(finUA.checkThatCurencyIsSelected()));
+        assertTrue("Currency type is not switched to EUR",finUA.checkThatCurencyIsSelected());
     }
 
     @Step
     public void verifyCalculation_EUR_AVG_BID(){
         Double calcResult = finUA.calcAVG_EURBID();
-        Double givenResult = finUA.getAVG_BID();
-        assumeThat(calcResult,is(givenResult));
+        Double actualResult = finUA.getAVG_BID();
+        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
     }
 
     @Step
     public void verifyCalculation_EUR_AVG_ASK(){
         Double calcResult = finUA.calcAVG_EURASK();
-        Double givenResult = finUA.getAVG_ASK();
-        assumeThat(givenResult,is(calcResult));
+        Double actualResult = finUA.getAVG_ASK();
+        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
     }
 
     @Step
     public void verifyCalculation_EUR_MIN_BID(){
         Double calcResult = finUA.calcMIN_EURBID();
-        Double givenResult = finUA.getMIN_BID();
-        assumeThat(givenResult,is(calcResult));
+        Double actualResult = finUA.getMIN_BID();
+        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
     }
     @Step
     public void verifyCalculation_EUR_MIN_ASK(){
         Double calcResult = finUA.calcMIN_EURASK();
-        Double givenResult = finUA.getMIN_ASK();
-        assumeThat(givenResult,is(calcResult));
+        Double actualResult = finUA.getMIN_ASK();
+        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
     }
     @Step
     public void verifyCalculation_EUR_MAX_BID(){
         Double calcResult = finUA.calcMAX_EURBID();
-        Double givenResult = finUA.getMAX_BID();
-        assumeThat(givenResult,is(calcResult));
+        Double actualResult = finUA.getMAX_BID();
+        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
     }
     @Step
     public void verifyCalculation_EUR_MAX_ASK(){
         Double calcResult = finUA.calcMAX_EURASK();
-        Double givenResult = finUA.getMAX_ASK();
-        assumeThat(givenResult,is(calcResult));
+        Double actualResult = finUA.getMAX_ASK();
+        assertEquals("Calculated value is not equal to the value from summary table",calcResult,actualResult);
     }
     @Step
     public void verifyCalculation_EUR_OPTM_BID(){
         Double maximumBID = finUA.calcMAX_EURBID();
         Double optimalBID = finUA.getOPTM_BID();
-        assumeTrue("Maximum BID should be equal Optimal BID",maximumBID.equals(optimalBID));
-
+        assertEquals("Calculated value is not equal to the value from summary table",maximumBID,optimalBID);
     }
     @Step
     public void verifyCalculation_EUR_OPTM_ASK(){
         Double minimumASK = finUA.calcMIN_EURASK();
         Double optimalASK = finUA.getOPTM_ASK();
-        assumeTrue("Minimum Ask should be equal Optimal ASK",minimumASK.equals(optimalASK));
+        assertEquals("Calculated value is not equal to the value from summary table",minimumASK,optimalASK);
     }
 
 

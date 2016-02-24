@@ -19,36 +19,39 @@ public class FinUA_StartPage extends PageObject {
     @FindBy (xpath = "//a[@href='/eur/']/../..") private WebElementFacade typeOfCurrency_EUR;
 
     // elements from Summary table
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[1]",timeoutInSeconds="6") private WebElement maxBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[2]",timeoutInSeconds="6") private WebElement maxASK;
-   // @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]") private WebElementFacade maxBID;
-   // @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]") private WebElementFacade maxASK;
-
-
-    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]") private WebElementFacade minBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]") private WebElementFacade minASK;
-    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[1]") private WebElementFacade avgBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[2]") private WebElementFacade avgASK;
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[1]") private WebElementFacade optmBID;  // should be equal to maxBID
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[2]") private WebElementFacade optmASK; // should be equal to minASK
+    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[1]",timeoutInSeconds="6")
+    private WebElement maxBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[2]",timeoutInSeconds="6")
+    private WebElement maxASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]")
+    private WebElementFacade minBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]")
+    private WebElementFacade minASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[1]")
+    private WebElementFacade avgBID;
+    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[2]")
+    private WebElementFacade avgASK;
+    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[1]")
+    private WebElementFacade optmBID;  // should be equal to maxBID
+    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[2]")
+    private WebElementFacade optmASK; // should be equal to minASK
 
     //List of bank's rates
-    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr[not (@class)='expired']/td[2]") private List<WebElement> ratesBIDValueList; //[not (@class)='expired']
-    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr[not (@class)='expired']/td[3]") private List<WebElement> ratesASKValueList; //[not (@class)='expired']
+    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr[not (@class)='expired']/td[2]")
+    private List<WebElement> ratesBIDValueList; //[not (@class)='expired']
+    @FindBy(xpath = "//tr[th[contains(text(),'Сводка')]]/preceding-sibling::tr[not (@class)='expired']/td[3]")
+    private List<WebElement> ratesASKValueList; //[not (@class)='expired']
 
-
-
-
+    // switch currency type
     public void switchCurrencyToEUR() {
         typeOfCurrency_EUR.click();
     }
 
     public boolean  checkThatCurencyIsSelected() {
-        //typeOfCurrency_EUR.click();
-            if (getDriver().getCurrentUrl().endsWith("eur/")) {
-                return true;
-            } else
-                return false;
+        if (getDriver().getCurrentUrl().endsWith("eur/"))
+            return true;
+         else
+            return false;
     }
     // calc AVG value
     private Double countAVG (List<WebElement> list){
@@ -64,7 +67,6 @@ public class FinUA_StartPage extends PageObject {
     public Double calcAVG_EURBID(){
         return countAVG(ratesBIDValueList);
     }
-
     public Double calcAVG_EURASK(){
         return countAVG(ratesASKValueList);
     }
@@ -115,11 +117,10 @@ public class FinUA_StartPage extends PageObject {
     }
 
     public Double getMAX_BID(){
-
-        return Double.parseDouble(maxBID.getText());}
+        return Double.parseDouble(maxBID.getText());
+    }
 
     public Double getMAX_ASK(){
-
         return Double.parseDouble(maxASK.getText());
     }
 
