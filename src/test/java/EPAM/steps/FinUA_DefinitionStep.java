@@ -44,6 +44,11 @@ public class FinUA_DefinitionStep {
     public void thenRUBExchangeratesAREShown() {
         steps_finUa.checkThatRUBRatesIsSelected();
     }
+    @When("'RUB' rates are shown")
+    public void whenRUBExchangeratesAREShown() {
+        steps_finUa.checkThatRUBRatesIsSelected();
+    }
+
     @Then("'EUR' rates are shown")
     public void thenEURExchangeratesAREShown() {
         steps_finUa.checkThatEURRatesIsSelected();

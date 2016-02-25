@@ -20,21 +20,21 @@ public class FinUA_StartPage extends PageObject {
     @FindBy (xpath = "//a[@href='/rub/']/../..") private WebElementFacade typeOfCurrency_RUB;
 
     // elements from Summary table
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[1]",timeoutInSeconds="6")
+    @FindBy(xpath = "//td[em[contains(text(),'Макс')]]/following-sibling::*[1]",timeoutInSeconds="6")
     private WebElement maxBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Максимальний')]]/following-sibling::*[2]",timeoutInSeconds="6")
+    @FindBy(xpath = "//td[em[contains(text(),'Макс')]]/following-sibling::*[2]",timeoutInSeconds="6")
     private WebElement maxASK;
-    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[1]")
+    @FindBy(xpath = "//td[em[contains(text(),'Мин')]]/following-sibling::*[1]")
     private WebElementFacade minBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Минимальный')]]/following-sibling::*[2]")
+    @FindBy(xpath = "//td[em[contains(text(),'Мин')]]/following-sibling::*[2]")
     private WebElementFacade minASK;
-    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[1]")
+    @FindBy(xpath = "//td[em[contains(text(),'Сред')]]/following-sibling::*[1]")
     private WebElementFacade avgBID;
-    @FindBy(xpath = "//td[em[contains(text(),'Средний')]]/following-sibling::*[2]")
+    @FindBy(xpath = "//td[em[contains(text(),'Сред')]]/following-sibling::*[2]")
     private WebElementFacade avgASK;
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[1]")
+    @FindBy(xpath = "//td[em[contains(text(),'Опт')]]/following-sibling::*[1]")
     private WebElementFacade optmBID;  // should be equal to maxBID
-    @FindBy(xpath = "//td[em[contains(text(),'Оптимальний')]]/following-sibling::*[2]")
+    @FindBy(xpath = "//td[em[contains(text(),'Опт')]]/following-sibling::*[2]")
     private WebElementFacade optmASK; // should be equal to minASK
 
     //List of bank's rates
