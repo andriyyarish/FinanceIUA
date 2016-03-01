@@ -1,0 +1,73 @@
+<acceptance-test-run title="Checking calculation of OPTIMAL EUR-UAH rates based on bank&apos;s rates data" name="Checking calculation of OPTIMAL EUR-UAH rates based on bank&apos;s rates data" steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="11861" timestamp="2016-02-29T16:57:16.407+02:00" session-id="069b75f2a71b64f43824eac9dd602739">
+  <user-story id="FinUA_checkRatesSummaryCalc_EUR" name="Fin ua check rates summary calc eur" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua check rates summary calc eur" type="story"/>
+    <tag name="Fin ua summary of exchange rates/Check calculation of summary exchange rates for eur uah" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="7c325cefb17c8a0f9729967971652a18.png"/>
+      <screenshot image="3c64fa5c9857111ccb1ccb5ed0e3e93b.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1719">
+      <screenshots>
+        <screenshot image="7c325cefb17c8a0f9729967971652a18.png"/>
+        <screenshot image="6b3e82f5e8f067f74e2dc2a16be0cf40.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;EUR&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="b7e36a0bc62bd525f3f8ca340c339da6.png"/>
+      <screenshot image="4f9bc15dfa517c5b1338474dbaa68ab2.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1215">
+      <screenshots>
+        <screenshot image="f096804014dcda828fee3bd98ec3815f.png"/>
+        <screenshot image="63514c0e6d565c8aa72f9075a6802d5b.png"/>
+      </screenshots>
+      <description>Switch to EUR rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then &apos;EUR&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="1c1c220429c9311cca0734de28c2e633.png"/>
+      <screenshot image="68145729803b01cf601159f1a148a81f.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="770">
+      <screenshots>
+        <screenshot image="f03953b40c823665e51b0a4096c88f65.png"/>
+        <screenshot image="5d82dd534fc88d1bb89582c7e4572819.png"/>
+      </screenshots>
+      <description>Check that EUR rates is selected</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then optimal value of BID rate in summary table is equal to maximum value of BID rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="9169445ef60dbc52bc9c34011050f519.png"/>
+      <screenshot image="ca8adce5807c873b608fedeb103c5865.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2011">
+      <screenshots>
+        <screenshot image="05cc7c6c5bdc4f62b076250261cebf49.png"/>
+        <screenshot image="20092b6d8105ab35d673e3e3e788ed3b.png"/>
+      </screenshots>
+      <description>Verify calculation eur optm bid</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then optimal value of ASK rate in summary table is equal to minimum value of ASK rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="ae8d9843b847a7731254475eb5c5e4df.png"/>
+      <screenshot image="1a1a95cae540183a819e90a7ce846b67.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2024">
+      <screenshots>
+        <screenshot image="1e394dd29d2d134109c5561755c7ec12.png"/>
+        <screenshot image="8b8bac417f56b63fde18bf1423bf8ecd.png"/>
+      </screenshots>
+      <description>Verify calculation eur optm ask</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

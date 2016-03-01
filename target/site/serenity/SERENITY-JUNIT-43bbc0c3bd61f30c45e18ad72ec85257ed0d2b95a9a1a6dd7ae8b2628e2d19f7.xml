@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Fin ua check rates summary calc eur" skipped="0" tests="5" time="55.55" timestamp="2016-02-60 04:56:32"><testcase name="Checking switching to EUR-UAH bank's rates data"/><testcase name="Checking calculation of MAXIMUM EUR-UAH rates based on bank's rates data"><failure message="Calculated value is not equal to the value from summary table&#10;Expected: is &lt;30.6&gt;&#10;     but: was &lt;34.0&gt;" type="java.lang.AssertionError">Calculated value is not equal to the value from summary table
+Expected: is &lt;30.6&gt;
+     but: was &lt;34.0&gt;</failure><system-err>Calculated value is not equal to the value from summary table
+Expected: is &lt;30.6&gt;
+     but: was &lt;34.0&gt;&#13;
+EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_MAX_ASK(FinUa_EndUserSteps.java:110)&#13;
+EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_MAX_ASK(FinUA_DefinitionStep.java:86)&#13;
+</system-err></testcase><testcase name="Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data"><failure message="Calculated value is not equal to the value from summary table&#10;Expected: is &lt;30.1291&gt;&#10;     but: was &lt;30.2464&gt;" type="java.lang.AssertionError">Calculated value is not equal to the value from summary table
+Expected: is &lt;30.1291&gt;
+     but: was &lt;30.2464&gt;</failure><system-err>Calculated value is not equal to the value from summary table
+Expected: is &lt;30.1291&gt;
+     but: was &lt;30.2464&gt;&#13;
+EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_AVG_ASK(FinUa_EndUserSteps.java:77)&#13;
+EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_AVG_ASK(FinUA_DefinitionStep.java:66)&#13;
+</system-err></testcase><testcase name="Checking calculation of MINIMUM EUR-UAH rates based on bank's rates data"/><testcase name="Checking calculation of OPTIMAL EUR-UAH rates based on bank's rates data"/></testsuite>

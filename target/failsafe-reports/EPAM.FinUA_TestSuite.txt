@@ -1,0 +1,132 @@
+-------------------------------------------------------------------------------
+Test set: EPAM.FinUA_TestSuite
+-------------------------------------------------------------------------------
+Tests run: 63, Failures: 8, Errors: 0, Skipped: 3, Time elapsed: 281.821 sec <<< FAILURE! - in EPAM.FinUA_TestSuite
+Given the user is on the finance.i.ua home page??(EPAM.steps.FinUA_DefinitionStep)  Time elapsed: 11.693 sec  <<< FAILURE!
+net.thucydides.core.pages.WrongPageError: This is not the page you're looking for: I was looking for a page compatible with class EPAM.pages.FinUA_StartPage_BanksRatesTable but I was at the URL https://support.skype.com/en/faq/FA34612/what-is-the-skype-extension
+	at net.serenitybdd.core.pages.PageObject.thisIsNotThePageYourLookingFor(PageObject.java:778)
+	at net.serenitybdd.core.pages.PageObject.ensurePageIsOnAMatchingUrl(PageObject.java:759)
+	at net.serenitybdd.core.pages.PageObject.checkUrlPatterns(PageObject.java:751)
+	at net.serenitybdd.core.pages.PageObject.open(PageObject.java:740)
+	at net.serenitybdd.core.pages.PageObject.open(PageObject.java:727)
+	at EPAM.steps.serenity.FinUa_EndUserSteps.goToHomePage(FinUa_EndUserSteps.java:28)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1.CGLIB$goToHomePage$0(<generated>)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1$$FastClassByCGLIB$$be4d894a.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:348)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:333)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:308)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:130)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:57)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1.goToHomePage(<generated>)
+	at EPAM.steps.FinUA_DefinitionStep.givenTheUserIsOnTheFinanceIUAHomePage(FinUA_DefinitionStep.java:18)
+
+Scenario: Open Currency converter tab  Time elapsed: 11.702 sec  <<< FAILURE!
+java.lang.AssertionError: scenario failed!
+	at de.codecentric.jbehave.junit.monitoring.JUnitScenarioReporter.afterScenario(JUnitScenarioReporter.java:218)
+	at org.jbehave.core.reporters.DelegatingStoryReporter.afterScenario(DelegatingStoryReporter.java:43)
+	at org.jbehave.core.reporters.ConcurrentStoryReporter.afterScenario(ConcurrentStoryReporter.java:175)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:347)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:239)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:182)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:266)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:233)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+FinUA_CurrencyExchangeConverter.story  Time elapsed: 12.6 sec  <<< FAILURE!
+java.lang.AssertionError: story failed!
+	at de.codecentric.jbehave.junit.monitoring.JUnitScenarioReporter.afterStory(JUnitScenarioReporter.java:143)
+	at org.jbehave.core.reporters.DelegatingStoryReporter.afterStory(DelegatingStoryReporter.java:49)
+	at org.jbehave.core.reporters.ConcurrentStoryReporter.afterStory(ConcurrentStoryReporter.java:121)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:355)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:239)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:182)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:266)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:233)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Then maximum value of ASK rate in bank's table is equal to maximum value of ASK rate in summary table?(EPAM.steps.FinUA_DefinitionStep)  Time elapsed: 3.644 sec  <<< FAILURE!
+java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is <30.6>
+     but: was <34.0>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_MAX_ASK(FinUa_EndUserSteps.java:110)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1.CGLIB$verifyCalculation_EUR_MAX_ASK$10(<generated>)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1$$FastClassByCGLIB$$be4d894a.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:348)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:333)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:308)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:130)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:57)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1.verifyCalculation_EUR_MAX_ASK(<generated>)
+	at EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_MAX_ASK(FinUA_DefinitionStep.java:86)
+
+Scenario: Checking calculation of MAXIMUM EUR-UAH rates based on bank's rates data  Time elapsed: 3.644 sec  <<< FAILURE!
+java.lang.AssertionError: scenario failed!
+	at de.codecentric.jbehave.junit.monitoring.JUnitScenarioReporter.afterScenario(JUnitScenarioReporter.java:218)
+	at org.jbehave.core.reporters.DelegatingStoryReporter.afterScenario(DelegatingStoryReporter.java:43)
+	at org.jbehave.core.reporters.ConcurrentStoryReporter.afterScenario(ConcurrentStoryReporter.java:175)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:347)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:239)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:182)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:266)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:233)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Then calculated avg ASK rate is equal to avg ASK value from summary block?(EPAM.steps.FinUA_DefinitionStep)  Time elapsed: 4.579 sec  <<< FAILURE!
+java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is <30.1291>
+     but: was <30.2464>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_AVG_ASK(FinUa_EndUserSteps.java:77)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1.CGLIB$verifyCalculation_EUR_AVG_ASK$6(<generated>)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1$$FastClassByCGLIB$$be4d894a.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:348)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:333)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:308)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:130)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:57)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$4d394fa1.verifyCalculation_EUR_AVG_ASK(<generated>)
+	at EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_AVG_ASK(FinUA_DefinitionStep.java:66)
+
+Scenario: Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data  Time elapsed: 4.588 sec  <<< FAILURE!
+java.lang.AssertionError: scenario failed!
+	at de.codecentric.jbehave.junit.monitoring.JUnitScenarioReporter.afterScenario(JUnitScenarioReporter.java:218)
+	at org.jbehave.core.reporters.DelegatingStoryReporter.afterScenario(DelegatingStoryReporter.java:43)
+	at org.jbehave.core.reporters.ConcurrentStoryReporter.afterScenario(ConcurrentStoryReporter.java:175)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:347)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:239)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:182)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:266)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:233)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+FinUA_checkRatesSummaryCalc_EUR.story  Time elapsed: 6.448 sec  <<< FAILURE!
+java.lang.AssertionError: story failed!
+	at de.codecentric.jbehave.junit.monitoring.JUnitScenarioReporter.afterStory(JUnitScenarioReporter.java:143)
+	at org.jbehave.core.reporters.DelegatingStoryReporter.afterStory(DelegatingStoryReporter.java:49)
+	at org.jbehave.core.reporters.ConcurrentStoryReporter.afterStory(ConcurrentStoryReporter.java:121)
+	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:355)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:239)
+	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:182)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:266)
+	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:233)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+

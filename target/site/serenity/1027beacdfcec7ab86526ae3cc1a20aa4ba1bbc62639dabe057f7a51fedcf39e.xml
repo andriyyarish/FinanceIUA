@@ -1,0 +1,41 @@
+<acceptance-test-run title="Checking switching to USD-UAH bank&apos;s rates data" name="Checking switching to USD-UAH bank&apos;s rates data" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="20107" timestamp="2016-02-29T16:55:08.048+02:00" session-id="102f8c6532ca9449b7144355a58a7481">
+  <user-story id="FinUA_checkRatesSummaryCalc_USD" name="Fin ua check rates summary calc usd" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_USD.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua summary of exchange rates/Fin ua check rates summary calc usd" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="aa46cefc206ba560a9f9d8a9e85ea52a.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="14691">
+      <screenshots>
+        <screenshot image="97d16e44f59e8df43118f7222e54841c.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;USD&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1138">
+      <screenshots>
+        <screenshot image="49fcf4ffc0f5ade9163bf3b13c951930.png"/>
+      </screenshots>
+      <description>Switch to USD rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then &apos;USD&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="47f2ccca0e8ad95540dbb5fbb0a0c3e8.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="952">
+      <screenshots>
+        <screenshot image="0354e84e0e11ed63fe828f1970e54ff9.png"/>
+        <screenshot image="7e33b6bc2eaa10b5510f49138d3b02b8.png"/>
+      </screenshots>
+      <description>Check that USD rates is selected</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

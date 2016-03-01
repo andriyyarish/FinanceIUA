@@ -1,0 +1,8 @@
+#org.jbehave.core.embedder.StoryManager
+#Mon Feb 29 16:57:29 EET 2016
+stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story=56000
+threads=1
+total=139000
+stories/FinUA_summary_Of_Exchange_Rates/FinUA_CurrencyExchangeConverter.story=12000
+threadAverage=139000
+stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_USD.story=71000

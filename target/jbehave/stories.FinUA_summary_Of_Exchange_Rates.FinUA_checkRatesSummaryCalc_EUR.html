@@ -1,0 +1,89 @@
+<div class="story">
+<h1>Check calculation of summary exchange rates for EUR-UAH</h1>
+<div class="path">stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> check calculation of exchange rates in summary table</div>
+<div class="element asA"><span class="keyword asA">As a</span> n user</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> calc summary rates of EUR currency based on collection of rates from each bank and compare with summary table</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking switching to EUR-UAH bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'EUR' button</div>
+<div class="step successful">Then 'EUR' rates are shown</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of MAXIMUM EUR-UAH rates based on bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'EUR' button</div>
+<div class="step successful">Then 'EUR' rates are shown</div>
+<div class="step successful">Then maximum value of BID rate in bank's table is equal to maximum value of BID rate in summary table</div>
+<div class="step failed">Then maximum value of ASK rate in bank's table is equal to maximum value of ASK rate in summary table <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is &lt;30.6&gt;
+     but: was &lt;34.0&gt;</span></div>
+<pre class="failure">java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is &lt;30.6&gt;
+     but: was &lt;34.0&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_MAX_ASK(FinUa_EndUserSteps.java:110)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$b35907a3.CGLIB$verifyCalculation_EUR_MAX_ASK$10(&lt;generated&gt;)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$b35907a3$$FastClassByCGLIB$$4c197140.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:348)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:333)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:308)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:130)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:57)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$b35907a3.verifyCalculation_EUR_MAX_ASK(&lt;generated&gt;)
+	at EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_MAX_ASK(FinUA_DefinitionStep.java:86)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:595)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:566)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'EUR' button</div>
+<div class="step successful">Then 'EUR' rates are shown</div>
+<div class="step successful">Then calculated avg BID rate is equal to avg BID value from summary block</div>
+<div class="step failed">Then calculated avg ASK rate is equal to avg ASK value from summary block <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is &lt;30.1291&gt;
+     but: was &lt;30.2464&gt;</span></div>
+<pre class="failure">java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is &lt;30.1291&gt;
+     but: was &lt;30.2464&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_AVG_ASK(FinUa_EndUserSteps.java:77)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$b35907a3.CGLIB$verifyCalculation_EUR_AVG_ASK$6(&lt;generated&gt;)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$b35907a3$$FastClassByCGLIB$$4c197140.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:348)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:333)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:308)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:130)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:57)
+	at EPAM.steps.serenity.FinUa_EndUserSteps$$EnhancerByCGLIB$$b35907a3.verifyCalculation_EUR_AVG_ASK(&lt;generated&gt;)
+	at EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_AVG_ASK(FinUA_DefinitionStep.java:66)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:595)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:566)
+...</pre>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of MINIMUM EUR-UAH rates based on bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'EUR' button</div>
+<div class="step successful">Then 'EUR' rates are shown</div>
+<div class="step successful">Then minimum value of BID rate in bank's table is equal to minimum value of BID rate in summary table</div>
+<div class="step successful">Then minimum value of ASK rate in bank's table is equal to minimum value of ASK rate in summary table</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of OPTIMAL EUR-UAH rates based on bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'EUR' button</div>
+<div class="step successful">Then 'EUR' rates are shown</div>
+<div class="step successful">Then optimal value of BID rate in summary table is equal to maximum value of BID rate in summary table</div>
+<div class="step successful">Then optimal value of ASK rate in summary table is equal to minimum value of ASK rate in summary table</div>
+</div>
+</div>

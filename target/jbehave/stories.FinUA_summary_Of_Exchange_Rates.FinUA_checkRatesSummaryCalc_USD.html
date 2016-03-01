@@ -1,0 +1,39 @@
+<div class="story">
+<h1></h1>
+<div class="path">stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_USD.story</div>
+<div class="scenario">
+<h2>Scenario: Checking switching to USD-UAH bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'USD' button</div>
+<div class="step successful">Then 'USD' rates are shown</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of MAXIMUM USD-UAH rates based on bank's rates data</h2>
+<div class="step successful">Given the user is on the finance.i.ua home page</div>
+<div class="step successful">When the user click on 'USD' button</div>
+<div class="step successful">And 'USD' rates are shown</div>
+<div class="step successful">Then maximum value of BID rate in bank's table is equal to maximum value of BID rate in summary table</div>
+<div class="step successful">Then maximum value of ASK rate in bank's table is equal to maximum value of ASK rate in summary table</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of AVERAGE USD-UAH rates based on bank's rates data</h2>
+<div class="step successful">When the user click on 'USD' button</div>
+<div class="step successful">And 'USD' rates are shown</div>
+<div class="step successful">Then calculated avg BID rate is equal to avg BID value from summary block</div>
+<div class="step successful">Then calculated avg ASK rate is equal to avg ASK value from summary block</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of MINIMUM USD-UAH rates based on bank's rates data</h2>
+<div class="step successful">When the user click on 'USD' button</div>
+<div class="step successful">And 'USD' rates are shown</div>
+<div class="step successful">Then minimum value of BID rate in bank's table is equal to minimum value of BID rate in summary table</div>
+<div class="step successful">Then minimum value of ASK rate in bank's table is equal to minimum value of ASK rate in summary table</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Checking calculation of OPTIMAL USD-UAH rates based on bank's rates data</h2>
+<div class="step successful">When the user click on 'USD' button</div>
+<div class="step successful">And 'USD' rates are shown</div>
+<div class="step successful">Then optimal value of BID rate in summary table is equal to maximum value of BID rate in summary table</div>
+<div class="step successful">Then optimal value of ASK rate in summary table is equal to minimum value of ASK rate in summary table</div>
+</div>
+</div>

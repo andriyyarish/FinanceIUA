@@ -1,0 +1,77 @@
+<acceptance-test-run title="Checking calculation of AVERAGE EUR-UAH rates based on bank&apos;s rates data" name="Checking calculation of AVERAGE EUR-UAH rates based on bank&apos;s rates data" steps="5" successful="4" failures="1" skipped="0" ignored="0" pending="0" annotated-result="FAILURE" result="FAILURE" duration="10934" timestamp="2016-02-29T16:56:54.401+02:00" session-id="069b75f2a71b64f43824eac9dd602739">
+  <user-story id="FinUA_checkRatesSummaryCalc_EUR" name="Fin ua check rates summary calc eur" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua check rates summary calc eur" type="story"/>
+    <tag name="Fin ua summary of exchange rates/Check calculation of summary exchange rates for eur uah" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="c289c5a97f5fe92e7e502ef21819487f.png"/>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1051">
+      <screenshots>
+        <screenshot image="a4a30262f5abe36aebeb9ee6f5f8965d.png"/>
+        <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;EUR&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="1817ebae97f278339162f2ebf5e617fc.png"/>
+      <screenshot image="2b4651f85f62cb48424fe825a657e479.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1038">
+      <screenshots>
+        <screenshot image="00dc55767390021887c8e13ba5d4b2f1.png"/>
+        <screenshot image="b91622acdc7fdbaefc2154f2978906e0.png"/>
+      </screenshots>
+      <description>Switch to EUR rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then &apos;EUR&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="f945a228d70a4f56701560c5abd1494f.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="702">
+      <screenshots>
+        <screenshot image="2b4651f85f62cb48424fe825a657e479.png"/>
+      </screenshots>
+      <description>Check that EUR rates is selected</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then calculated avg BID rate is equal to avg BID value from summary block" result="SUCCESS">
+    <screenshots>
+      <screenshot image="a37abc41d2acf3924a3c1f97ea248921.png"/>
+      <screenshot image="f005ae415548d781d923bdd9e3b7b755.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2242">
+      <screenshots>
+        <screenshot image="805665254939011c98e639e6bf576c97.png"/>
+        <screenshot image="9fa9c4c545b46e0742dc6244d0658648.png"/>
+      </screenshots>
+      <description>Verify calculation eur avg bid</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then calculated avg ASK rate is equal to avg ASK value from summary block" result="FAILURE">
+    <screenshots>
+      <screenshot image="f005ae415548d781d923bdd9e3b7b755.png"/>
+    </screenshots>
+    <test-step result="FAILURE" duration="2179">
+      <screenshots>
+        <screenshot image="f5dcc7b410d649a5c5119e74349c8ba5.png"/>
+        <screenshot image="f5dcc7b410d649a5c5119e74349c8ba5.png" source="pagesource2556576714461642595.html.txt"/>
+      </screenshots>
+      <description>Verify calculation eur avg ask</description>
+      <error>java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is &lt;30.1291&gt;
+     but: was &lt;30.2464&gt;</error>
+      <exception>java.lang.AssertionError:Calculated value is not equal to the value from summary table
+Expected: is &lt;30.1291&gt;
+     but: was &lt;30.2464&gt;&#xd;
+[EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_AVG_ASK(FinUa_EndUserSteps.java:77), EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_AVG_ASK(FinUA_DefinitionStep.java:66)]</exception>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

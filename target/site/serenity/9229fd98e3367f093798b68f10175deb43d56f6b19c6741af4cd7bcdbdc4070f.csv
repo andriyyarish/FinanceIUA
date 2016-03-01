@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Fin ua check rates summary calc eur","Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data","FAILURE","2016-02-29T16:12:59.790+02:00","0.0","25.68"
+"Fin ua check rates summary calc eur","Checking calculation of MAXIMUM EUR-UAH rates based on bank's rates data","FAILURE","2016-02-29T16:12:33.425+02:00","0.0","26.35"
+"Fin ua check rates summary calc eur","Checking calculation of MINIMUM EUR-UAH rates based on bank's rates data","SUCCESS","2016-02-29T16:13:25.473+02:00","0.0","25.61"
+"Fin ua check rates summary calc eur","Checking calculation of OPTIMAL EUR-UAH rates based on bank's rates data","SUCCESS","2016-02-29T16:13:51.084+02:00","0.0","30.74"
+"Fin ua check rates summary calc eur","Checking switching to EUR-UAH bank's rates data","SUCCESS","2016-02-29T16:12:08.315+02:00","0.0","25.11"

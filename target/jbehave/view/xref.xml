@@ -1,0 +1,131 @@
+<xref>
+  <whenMade>1456757851525</whenMade>
+  <createdBy>JBehave</createdBy>
+  <metaFilter>-ignore</metaFilter>
+  <meta/>
+  <stories>
+    <story>
+      <description></description>
+      <narrative></narrative>
+      <name>FinUA_checkRatesSummaryCalc_USD.story</name>
+      <path>stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_USD.story</path>
+      <html>stories.FinUA_summary_Of_Exchange_Rates.FinUA_checkRatesSummaryCalc_USD.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Checking switching to USD-UAH bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;USD&apos; button
+Then &apos;USD&apos; rates are shown
+
+
+Scenario:Checking calculation of MAXIMUM USD-UAH rates based on bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;USD&apos; button
+And &apos;USD&apos; rates are shown
+Then maximum value of BID rate in bank&apos;s table is equal to maximum value of BID rate in summary table
+Then maximum value of ASK rate in bank&apos;s table is equal to maximum value of ASK rate in summary table
+
+
+Scenario:Checking calculation of AVERAGE USD-UAH rates based on bank&apos;s rates data
+When the user click on &apos;USD&apos; button
+And &apos;USD&apos; rates are shown
+Then calculated avg BID rate is equal to avg BID value from summary block
+Then calculated avg ASK rate is equal to avg ASK value from summary block
+
+
+Scenario:Checking calculation of MINIMUM USD-UAH rates based on bank&apos;s rates data
+When the user click on &apos;USD&apos; button
+And &apos;USD&apos; rates are shown
+Then minimum value of BID rate in bank&apos;s table is equal to minimum value of BID rate in summary table
+Then minimum value of ASK rate in bank&apos;s table is equal to minimum value of ASK rate in summary table
+
+
+Scenario:Checking calculation of OPTIMAL USD-UAH rates based on bank&apos;s rates data
+When the user click on &apos;USD&apos; button
+And &apos;USD&apos; rates are shown
+Then optimal value of BID rate in summary table is equal to maximum value of BID rate in summary table
+Then optimal value of ASK rate in summary table is equal to minimum value of ASK rate in summary table
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1456757707914</started>
+      <duration>70392</duration>
+    </story>
+    <story>
+      <description></description>
+      <narrative></narrative>
+      <name>FinUA_CurrencyExchangeConverter.story</name>
+      <path>stories/FinUA_summary_Of_Exchange_Rates/FinUA_CurrencyExchangeConverter.story</path>
+      <html>stories.FinUA_summary_Of_Exchange_Rates.FinUA_CurrencyExchangeConverter.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Open Currency converter tab
+Given the user is on the finance.i.ua home page
+When user click on CurrencyConverter link
+Then user should see currency converter Page
+And url should be equal to &apos;http://finance.i.ua/converter/&apos;
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1456757779660</started>
+      <duration>11758</duration>
+    </story>
+    <story>
+      <description>Check calculation of summary exchange rates for EUR-UAH</description>
+      <narrative>In order to check calculation of exchange rates in summary table
+As a n user
+I want to calc summary rates of EUR currency based on collection of rates from each bank and compare with summary table
+</narrative>
+      <name>FinUA_checkRatesSummaryCalc_EUR.story</name>
+      <path>stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story</path>
+      <html>stories.FinUA_summary_Of_Exchange_Rates.FinUA_checkRatesSummaryCalc_EUR.html</html>
+      <meta></meta>
+      <scenarios>Scenario:Checking switching to EUR-UAH bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;EUR&apos; button
+Then &apos;EUR&apos; rates are shown
+
+
+Scenario:Checking calculation of MAXIMUM EUR-UAH rates based on bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;EUR&apos; button
+Then &apos;EUR&apos; rates are shown
+Then maximum value of BID rate in bank&apos;s table is equal to maximum value of BID rate in summary table
+Then maximum value of ASK rate in bank&apos;s table is equal to maximum value of ASK rate in summary table
+
+
+Scenario:Checking calculation of AVERAGE EUR-UAH rates based on bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;EUR&apos; button
+Then &apos;EUR&apos; rates are shown
+Then calculated avg BID rate is equal to avg BID value from summary block
+Then calculated avg ASK rate is equal to avg ASK value from summary block
+
+
+Scenario:Checking calculation of MINIMUM EUR-UAH rates based on bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;EUR&apos; button
+Then &apos;EUR&apos; rates are shown
+Then minimum value of BID rate in bank&apos;s table is equal to minimum value of BID rate in summary table
+Then minimum value of ASK rate in bank&apos;s table is equal to minimum value of ASK rate in summary table
+
+
+Scenario:Checking calculation of OPTIMAL EUR-UAH rates based on bank&apos;s rates data
+Given the user is on the finance.i.ua home page
+When the user click on &apos;EUR&apos; button
+Then &apos;EUR&apos; rates are shown
+Then optimal value of BID rate in summary table is equal to maximum value of BID rate in summary table
+Then optimal value of ASK rate in summary table is equal to minimum value of ASK rate in summary table
+
+
+</scenarios>
+      <passed>false</passed>
+      <pending>false</pending>
+      <started>1456757792608</started>
+      <duration>55661</duration>
+    </story>
+  </stories>
+  <stepMatches/>
+</xref>

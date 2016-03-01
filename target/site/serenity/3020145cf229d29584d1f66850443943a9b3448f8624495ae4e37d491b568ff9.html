@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script><!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Demo Project using Serenity and JBehave</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+            > <a href="46fe7d899f3fad29bda161a9ae88b08def28a1497df0db1cde3ec58cb0aded69.html">Fin Ua Summary Of Exchange Rates</a>
+            > <a href="34295f2ff5ecf71eaac55d5e7e7ceb8040d43fe79695fa0c511708932d501eb1.html">Fin Ua Check Rates Summary Calc Eur</a>
+            > Checking calculation of AVERAGE EUR-UAH rates based on bank's rates data
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-02-2016 16:57</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Fin Ua Check Rates Summary Calc Eur</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In order to check calculation of exchange rates in summary table<br>As a n user<br>I want to calc summary rates of EUR currency based on collection of rates from each bank and compare with summary table
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="46fe7d899f3fad29bda161a9ae88b08def28a1497df0db1cde3ec58cb0aded69.html">Fin Ua Summary Of Exchange Rates
+                                    (feature)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="3c445771507da8118667bbf1f29a12dd07f2c9054d6e13778a40d23961c89e28.html">Check Calculation Of Summary Exchange Rates For Eur Uah
+                                    (story)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-3x' title='FAILURE'></i></span>
+                            <a href="http://saucelabs.com/jobs/069b75f2a71b64f43824eac9dd602739"><img class="story-outcome-icon"
+                                                                                    src="images/video.png" width="25"
+                                                                                    height="25" alt="Video"/></a>
+                            <span class="test-case-title">
+
+                                <span class="failing-color">Checking Calculation Of Average Eur-Uah Rates Based On Bank'S Rates Data
+                                    <span class="related-issue-title"></span>
+                            </span>
+                        </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+
+
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">                        &nbsp;
+                    </th>
+
+                    <th width="%" class="step-description-column greentext">
+                        Steps
+                    </th>
+                    <th width="120" class="greentext">Screenshot</th>
+                    <th width="100" class="greentext">Outcome</th>
+                    <th width="75" class="greentext">Duration</th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        <a name="0"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')" style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection0 success-icon" style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                            <span class="top-level-step">Given the user is on the finance.i.ua home page</span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1.95s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection0" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Go to home page</span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="3020145cf229d29584d1f66850443943a9b3448f8624495ae4e37d491b568ff9_screenshots.html#screenshots?screenshot=0">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="a4a30262f5abe36aebeb9ee6f5f8965d.png"
+                                         href="a4a30262f5abe36aebeb9ee6f5f8965d.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1.05s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        <a name="1"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')" style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection1 success-icon" style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block;">
+                            <span class="top-level-step">When the user click on 'EUR' button</span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">2.06s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection1" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Switch to EUR rates</span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="3020145cf229d29584d1f66850443943a9b3448f8624495ae4e37d491b568ff9_screenshots.html#screenshots?screenshot=2">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="00dc55767390021887c8e13ba5d4b2f1.png"
+                                         href="00dc55767390021887c8e13ba5d4b2f1.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1.04s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        <a name="2"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')" style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection2 success-icon" style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block;">
+                            <span class="top-level-step">Then 'EUR' rates are shown</span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1.38s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection2" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Check that EUR rates is selected</span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="3020145cf229d29584d1f66850443943a9b3448f8624495ae4e37d491b568ff9_screenshots.html#screenshots?screenshot=4">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="2b4651f85f62cb48424fe825a657e479.png"
+                                         href="2b4651f85f62cb48424fe825a657e479.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.7s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        <a name="3"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')" style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection3 success-icon" style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
+                               style="display:block;">
+                            <span class="top-level-step">Then calculated avg BID rate is equal to avg BID value from summary block</span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">2.97s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection3" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Verify calculation eur avg bid</span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="3020145cf229d29584d1f66850443943a9b3448f8624495ae4e37d491b568ff9_screenshots.html#screenshots?screenshot=5">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="805665254939011c98e639e6bf576c97.png"
+                                         href="805665254939011c98e639e6bf576c97.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">2.24s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-FAILURE">
+                    <td width="60" class="step-icon">
+                        <a name="4"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection4')" style="display:block">
+                                    <i class="fa fa-plus-square-o imgstepSection4 failure-icon" style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection4')"
+                               style="display:block;">
+                            <span class="top-level-step">Then calculated avg ASK rate is equal to avg ASK value from summary block</span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="FAILURE-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">2.56s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection4" style="display:none; width:100%">
+
+                <tr class="test-FAILURE">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Verify calculation eur avg ask</span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="FAILURE-text">
+                                <a href="3020145cf229d29584d1f66850443943a9b3448f8624495ae4e37d491b568ff9_screenshots.html#screenshots?screenshot=7">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="f5dcc7b410d649a5c5119e74349c8ba5.png"
+                                         href="f5dcc7b410d649a5c5119e74349c8ba5.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">FAILURE</span></td>
+                    <td width="100"><span class="nested-group-step">2.18s</span></td>
+                </tr>
+                    <tr class="test-FAILURE">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <span class="error-message ellipsis"
+                                  title='Assertion error: Calculated value is not equal to the value from summary tableExpected: is &lt;30.1291&gt; but: was &lt;30.2464&gt;'><pre>Assertion error: Calculated value is not equal to the value from summary tableExpected: is &lt;30.1291&gt; but: was &lt;30.2464&gt;</pre></span>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal">
+                        View stack trace
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                java.lang.AssertionError
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Calculated value is not equal to the value from summary table
+Expected: is <30.1291>
+     but: was <30.2464></h4>
+                                EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_AVG_ASK(FinUa_EndUserSteps.java
+                                    :77)
+                                EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_AVG_ASK(FinUA_DefinitionStep.java
+                                    :66)
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </td>
+                    </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-FAILURE">
+                        <td colspan="3"></td>
+                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>10.93s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div id="beforefooter"></div>
+    <div id="bottomfooter">
+        <span class="version">Serenity BDD version 1.1.26-rc.3</span>
+    </div>
+
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            }
+            else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $('.example-table table').DataTable({
+            "order": [
+                [1, "asc"]
+            ],
+            "pageLength": 25,
+            "scrollX": "100%",
+            "scrollXInner": "100%",
+            "scrollCollapse": true
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</body>
+</html>

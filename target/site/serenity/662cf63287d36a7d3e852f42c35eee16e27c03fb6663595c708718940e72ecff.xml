@@ -1,0 +1,57 @@
+<acceptance-test-run title="Open Currency converter tab" name="Open Currency converter tab" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="11755" timestamp="2016-02-29T16:56:19.663+02:00" session-id="173ec161b6e6dc910ec9f8eb4c3d3707">
+  <user-story id="FinUA_CurrencyExchangeConverter" name="Fin ua  currency exchange converter" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_CurrencyExchangeConverter.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua  currency exchange converter" type="story"/>
+    <tag name="Fin ua summary of exchange rates/Fin ua currency exchange converter" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="4603">
+      <screenshots>
+        <screenshot image="d80b409258502d4ed6c3f2a2f23d7f61.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When user click on CurrencyConverter link" result="SUCCESS">
+    <screenshots>
+      <screenshot image="dec3118a6c27e1877df5c53ac26b442c.png"/>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1770">
+      <screenshots>
+        <screenshot image="d3d735d441d2d2b27bbe6592489420bd.png"/>
+        <screenshot image="54cfb156cb3233cd5f8d99a5fbe60a09.png"/>
+      </screenshots>
+      <description>Open currency converter</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then user should see currency converter Page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="6cb6529ff1496173590e0405d003edd6.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="870">
+      <screenshots>
+        <screenshot image="c720f13ae80a832d5c6f226234aa4dba.png"/>
+        <screenshot image="acfb81524461a58e3e64bf14246b9c3e.png"/>
+      </screenshots>
+      <description>Check that currency calculator is opened ui</description>
+    </test-step>
+  </test-group>
+  <test-group name="And url should be equal to &apos;http://finance.i.ua/converter/&apos;" result="SUCCESS">
+    <screenshots>
+      <screenshot image="4fe894565e4fcfd0466c10c247495850.png"/>
+      <screenshot image="1cac5fa16b4af960918f01a46e8fe5bf.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1015">
+      <screenshots>
+        <screenshot image="0a338a9c70e2a266f579257a6755faef.png"/>
+        <screenshot image="f8452b64e1926a1c706612fe73ffd57a.png"/>
+      </screenshots>
+      <description>Check that currency calculator is opened url</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

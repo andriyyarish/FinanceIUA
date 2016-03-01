@@ -1,0 +1,69 @@
+<acceptance-test-run title="Checking calculation of MINIMUM EUR-UAH rates based on bank&apos;s rates data" name="Checking calculation of MINIMUM EUR-UAH rates based on bank&apos;s rates data" steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="11069" timestamp="2016-02-29T16:57:05.337+02:00" session-id="069b75f2a71b64f43824eac9dd602739">
+  <user-story id="FinUA_checkRatesSummaryCalc_EUR" name="Fin ua check rates summary calc eur" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua check rates summary calc eur" type="story"/>
+    <tag name="Fin ua summary of exchange rates/Check calculation of summary exchange rates for eur uah" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="f5dcc7b410d649a5c5119e74349c8ba5.png"/>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1146">
+      <screenshots>
+        <screenshot image="f5dcc7b410d649a5c5119e74349c8ba5.png"/>
+        <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;EUR&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="3621d426fd8c351851b5310c8556035f.png"/>
+      <screenshot image="8fcc5063e2069d82d335223cb3fadd23.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1289">
+      <screenshots>
+        <screenshot image="6de6d6ee79004f473f38cdbca08685d1.png"/>
+        <screenshot image="1ca3cf720dd02447e743fa128770b877.png"/>
+      </screenshots>
+      <description>Switch to EUR rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then &apos;EUR&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="99e2a07c0e9a3912cdf570915a8d0d2f.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="777">
+      <screenshots>
+        <screenshot image="10116af85d99d6664d5b421439b82da7.png"/>
+      </screenshots>
+      <description>Check that EUR rates is selected</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then minimum value of BID rate in bank&apos;s table is equal to minimum value of BID rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="d0dd78b1870cbc3603dca4b603660b1e.png"/>
+      <screenshot image="7c325cefb17c8a0f9729967971652a18.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1985">
+      <screenshots>
+        <screenshot image="1031f80b50e874029289263b9e31ce96.png"/>
+        <screenshot image="7c325cefb17c8a0f9729967971652a18.png"/>
+      </screenshots>
+      <description>Verify calculation eur min bid</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then minimum value of ASK rate in bank&apos;s table is equal to minimum value of ASK rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="7c325cefb17c8a0f9729967971652a18.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1961">
+      <screenshots>
+        <screenshot image="7c325cefb17c8a0f9729967971652a18.png"/>
+      </screenshots>
+      <description>Verify calculation eur min ask</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

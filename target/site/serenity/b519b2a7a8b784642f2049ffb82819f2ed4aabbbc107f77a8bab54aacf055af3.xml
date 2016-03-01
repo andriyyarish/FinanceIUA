@@ -1,0 +1,71 @@
+<acceptance-test-run title="Checking calculation of MAXIMUM USD-UAH rates based on bank&apos;s rates data" name="Checking calculation of MAXIMUM USD-UAH rates based on bank&apos;s rates data" steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="17137" timestamp="2016-02-29T16:55:28.221+02:00" session-id="102f8c6532ca9449b7144355a58a7481">
+  <user-story id="FinUA_checkRatesSummaryCalc_USD" name="Fin ua check rates summary calc usd" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_USD.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua summary of exchange rates/Fin ua check rates summary calc usd" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="a903b2f76a3b5fc703653071674d0b3f.png"/>
+      <screenshot image="dbdf5f47ef7ade9a41731fc8920d2458.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="4768">
+      <screenshots>
+        <screenshot image="eed5ab72cae1a75b8ed8682a01392956.png"/>
+        <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;USD&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="0383e61d581f919be65ae5a59ac1ac72.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1402">
+      <screenshots>
+        <screenshot image="dca17c85c38ac7386810c2a4b1f693b5.png"/>
+        <screenshot image="fb9fcbecdf87a1ec473ca7abdcf2f0f5.png"/>
+      </screenshots>
+      <description>Switch to USD rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="And &apos;USD&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="578e7a43733861826e04d3369d362469.png"/>
+      <screenshot image="017b04ca1eb96c821015e08a92a7bbe5.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="946">
+      <screenshots>
+        <screenshot image="d9ff783b5dfa756686fe516567ebb69a.png"/>
+        <screenshot image="b67bdbe85dbcecdc995233449c8c04c7.png"/>
+      </screenshots>
+      <description>Check that USD rates is selected</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then maximum value of BID rate in bank&apos;s table is equal to maximum value of BID rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="8ecc49c3f5d54ffe0233608f89febfd8.png"/>
+      <screenshot image="681e5b779edd05c7651cc22d9b0dd63a.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2410">
+      <screenshots>
+        <screenshot image="cd3c21c869a8853901b9a57885aade16.png"/>
+        <screenshot image="51f9c7386190f738e9450cb29fcced3f.png"/>
+      </screenshots>
+      <description>Verify calculation eur max bid</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then maximum value of ASK rate in bank&apos;s table is equal to maximum value of ASK rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="c5f8c28d327ea5c7132231620fce3728.png"/>
+      <screenshot image="8c34f479485a199c01304b43c39f7ae9.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2276">
+      <screenshots>
+        <screenshot image="b6589ad683ccb34d9367f3c17442c59b.png"/>
+        <screenshot image="1745ba650283a29f300c91b157f670b5.png"/>
+      </screenshots>
+      <description>Verify calculation eur max ask</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

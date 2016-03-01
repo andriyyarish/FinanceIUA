@@ -1,0 +1,6 @@
+EPAM\pages\FinUA_CurrencyConverter.class
+EPAM\pages\FinUA_StartPage_BanksRatesTable.class
+EPAM\steps\serenity\FinUa_EndUserSteps.class
+EPAM\FinUA_CurrencyExchangeConverter.class
+EPAM\steps\FinUA_DefinitionStep.class
+EPAM\FinUA_TestSuite.class

@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Fin ua check rates summary calc usd","Checking calculation of AVERAGE USD-UAH rates based on bank's rates data","SUCCESS","2016-02-29T16:10:42.850+02:00","0.0","22.63"
+"Fin ua check rates summary calc usd","Checking calculation of MAXIMUM USD-UAH rates based on bank's rates data","SUCCESS","2016-02-29T16:10:14.114+02:00","0.0","28.74"
+"Fin ua check rates summary calc usd","Checking calculation of MINIMUM USD-UAH rates based on bank's rates data","SUCCESS","2016-02-29T16:11:05.484+02:00","0.0","25.36"
+"Fin ua check rates summary calc usd","Checking calculation of OPTIMAL USD-UAH rates based on bank's rates data","SUCCESS","2016-02-29T16:11:30.844+02:00","0.0","23.64"
+"Fin ua check rates summary calc usd","Checking switching to USD-UAH bank's rates data","SUCCESS","2016-02-29T16:09:48.453+02:00","0.0","25.62"

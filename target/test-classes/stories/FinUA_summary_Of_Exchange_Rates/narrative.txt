@@ -1,0 +1,4 @@
+Check calculation of summary exchange rates
+In order to check calculation of exchange rates in summary table
+As an user
+I want to calc summary rates of EUR currency based on collection of rates from each bank and compare with summary table

@@ -1,0 +1,79 @@
+<acceptance-test-run title="Checking calculation of MAXIMUM EUR-UAH rates based on bank&apos;s rates data" name="Checking calculation of MAXIMUM EUR-UAH rates based on bank&apos;s rates data" steps="5" successful="4" failures="1" skipped="0" ignored="0" pending="0" annotated-result="FAILURE" result="FAILURE" duration="11473" timestamp="2016-02-29T16:56:42.823+02:00" session-id="069b75f2a71b64f43824eac9dd602739">
+  <user-story id="FinUA_checkRatesSummaryCalc_EUR" name="Fin ua check rates summary calc eur" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua check rates summary calc eur" type="story"/>
+    <tag name="Fin ua summary of exchange rates/Check calculation of summary exchange rates for eur uah" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="a73859fc356a48735f6c7fe1f79bb498.png"/>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1254">
+      <screenshots>
+        <screenshot image="a73859fc356a48735f6c7fe1f79bb498.png"/>
+        <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;EUR&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="dcbb46a9037e60b67e0eeebcef78df63.png"/>
+      <screenshot image="0f587dd2310dd41e56229d24e9239432.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1203">
+      <screenshots>
+        <screenshot image="b2896f2ef19d69a9373fd17feedd4cc8.png"/>
+        <screenshot image="bf4a90de74f71ab39a8f29ff2c3d5bc1.png"/>
+      </screenshots>
+      <description>Switch to EUR rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then &apos;EUR&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="17cbf010e30f9004c2fff75c934ed004.png"/>
+      <screenshot image="dec217c4749891981966f8be4c620f92.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="732">
+      <screenshots>
+        <screenshot image="50e715f9c1a79cb04cc3e4738544d499.png"/>
+        <screenshot image="63eb59259394584996b9a615059d60ee.png"/>
+      </screenshots>
+      <description>Check that EUR rates is selected</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then maximum value of BID rate in bank&apos;s table is equal to maximum value of BID rate in summary table" result="SUCCESS">
+    <screenshots>
+      <screenshot image="ecacd7370d7d48f60bf88ade89df4eee.png"/>
+      <screenshot image="1dbd78882002578c05b062c6d83cd24b.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2112">
+      <screenshots>
+        <screenshot image="6eebfbc4387215d7b51012e86f904296.png"/>
+        <screenshot image="ba559408c9c9b29cafcdb43a88ec4422.png"/>
+      </screenshots>
+      <description>Verify calculation eur max bid</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then maximum value of ASK rate in bank&apos;s table is equal to maximum value of ASK rate in summary table" result="FAILURE">
+    <screenshots>
+      <screenshot image="1dbd78882002578c05b062c6d83cd24b.png"/>
+    </screenshots>
+    <test-step result="FAILURE" duration="2110">
+      <screenshots>
+        <screenshot image="e8fa300ad2a826490cfddbe71cf53b61.png"/>
+        <screenshot image="159e2def7be51c0bdab1ab4b31c6fd02.png" source="pagesource5014754859501135395.html.txt"/>
+      </screenshots>
+      <description>Verify calculation eur max ask</description>
+      <error>java.lang.AssertionError: Calculated value is not equal to the value from summary table
+Expected: is &lt;30.6&gt;
+     but: was &lt;34.0&gt;</error>
+      <exception>java.lang.AssertionError:Calculated value is not equal to the value from summary table
+Expected: is &lt;30.6&gt;
+     but: was &lt;34.0&gt;&#xd;
+[EPAM.steps.serenity.FinUa_EndUserSteps.verifyCalculation_EUR_MAX_ASK(FinUa_EndUserSteps.java:110), EPAM.steps.FinUA_DefinitionStep.verifyCalculation_EUR_MAX_ASK(FinUA_DefinitionStep.java:86)]</exception>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

@@ -1,0 +1,8 @@
+<story path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_CurrencyExchangeConverter.story" title="">
+<scenario keyword="Scenario:" title="Open Currency converter tab">
+<step outcome="successful">Given the user is on the finance.i.ua home page</step>
+<step outcome="successful">When user click on CurrencyConverter link</step>
+<step outcome="successful">Then user should see currency converter Page</step>
+<step outcome="successful">And url should be equal to &apos;http://finance.i.ua/converter/&apos;</step>
+</scenario>
+</story>

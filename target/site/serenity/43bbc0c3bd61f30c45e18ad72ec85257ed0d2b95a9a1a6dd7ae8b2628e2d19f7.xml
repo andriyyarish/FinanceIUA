@@ -1,0 +1,43 @@
+<acceptance-test-run title="Checking switching to EUR-UAH bank&apos;s rates data" name="Checking switching to EUR-UAH bank&apos;s rates data" steps="3" successful="3" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="10212" timestamp="2016-02-29T16:56:32.610+02:00" session-id="069b75f2a71b64f43824eac9dd602739">
+  <user-story id="FinUA_checkRatesSummaryCalc_EUR" name="Fin ua check rates summary calc eur" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_EUR.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua check rates summary calc eur" type="story"/>
+    <tag name="Fin ua summary of exchange rates/Check calculation of summary exchange rates for eur uah" type="story"/>
+  </tags>
+  <test-group name="Given the user is on the finance.i.ua home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="4717">
+      <screenshots>
+        <screenshot image="ea94e17c1346baafe25bc624edc94f26.png"/>
+      </screenshots>
+      <description>Go to home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When the user click on &apos;EUR&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="eb55ad0c358fc78240d5687a2d0ebfb2.png"/>
+      <screenshot image="a73859fc356a48735f6c7fe1f79bb498.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2773">
+      <screenshots>
+        <screenshot image="63e3742607908b2a8b1f089fd188ceeb.png"/>
+        <screenshot image="0a3fec8b356066e52f1abb7d8e8b2404.png"/>
+      </screenshots>
+      <description>Switch to EUR rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then &apos;EUR&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="a73859fc356a48735f6c7fe1f79bb498.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="657">
+      <screenshots>
+        <screenshot image="a73859fc356a48735f6c7fe1f79bb498.png"/>
+      </screenshots>
+      <description>Check that EUR rates is selected</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

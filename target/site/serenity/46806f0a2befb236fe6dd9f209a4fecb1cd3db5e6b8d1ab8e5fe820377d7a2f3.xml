@@ -1,0 +1,59 @@
+<acceptance-test-run title="Checking calculation of AVERAGE USD-UAH rates based on bank&apos;s rates data" name="Checking calculation of AVERAGE USD-UAH rates based on bank&apos;s rates data" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="11291" timestamp="2016-02-29T16:55:45.359+02:00" session-id="102f8c6532ca9449b7144355a58a7481">
+  <user-story id="FinUA_checkRatesSummaryCalc_USD" name="Fin ua check rates summary calc usd" path="stories/FinUA_summary_Of_Exchange_Rates/FinUA_checkRatesSummaryCalc_USD.story"/>
+  <tags>
+    <tag name="Fin ua summary of exchange rates" type="feature"/>
+    <tag name="Fin ua summary of exchange rates/Fin ua check rates summary calc usd" type="story"/>
+  </tags>
+  <test-group name="When the user click on &apos;USD&apos; button" result="SUCCESS">
+    <screenshots>
+      <screenshot image="fa190bb9282dbf1e2c939b6f7529f98a.png"/>
+      <screenshot image="a6400420c23df21ecbb2bb2a5e81b4c5.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1234">
+      <screenshots>
+        <screenshot image="c1c4e6a6a444c491bc2897172caf3001.png"/>
+        <screenshot image="261530d702c9e5f79a4dbe908f9bc79c.png"/>
+      </screenshots>
+      <description>Switch to USD rates</description>
+    </test-step>
+  </test-group>
+  <test-group name="And &apos;USD&apos; rates are shown" result="SUCCESS">
+    <screenshots>
+      <screenshot image="640f46683a6eb40d1a9228a88f065dda.png"/>
+      <screenshot image="76a7b9b1ce6d4a8d4c3f037a5fde350c.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1058">
+      <screenshots>
+        <screenshot image="ad55fe5b82d6586e8ec6aa2904b176fb.png"/>
+        <screenshot image="80530548753d695dd9ca014d4674d63e.png"/>
+      </screenshots>
+      <description>Check that USD rates is selected</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then calculated avg BID rate is equal to avg BID value from summary block" result="SUCCESS">
+    <screenshots>
+      <screenshot image="e28fce96ab5f842dee3f9ddb9155ec94.png"/>
+      <screenshot image="cd5ae3e5c1d980c44c8515fcdbf2b473.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2614">
+      <screenshots>
+        <screenshot image="9a8d8eb2bc5137d014ea8f898b156217.png"/>
+        <screenshot image="87880976bfb56a5cddb32ffc0ce2af98.png"/>
+      </screenshots>
+      <description>Verify calculation eur avg bid</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then calculated avg ASK rate is equal to avg ASK value from summary block" result="SUCCESS">
+    <screenshots>
+      <screenshot image="01590f3cb395552a93531985e99beab0.png"/>
+      <screenshot image="4df99b207ee7fcd99c105ba477ffd0a7.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2279">
+      <screenshots>
+        <screenshot image="62a8c7ea601b6a830cf72d7afb9a4d81.png"/>
+        <screenshot image="99ff4bf38f804b8c0d44333639af14e9.png"/>
+      </screenshots>
+      <description>Verify calculation eur avg ask</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>
